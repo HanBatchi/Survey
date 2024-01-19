@@ -28,13 +28,13 @@ def question(question_num):
         # If the question number is out of range or has already been answered,
         # redirect them to the appropriate question or the thank you page.
         next_question_num = len(responses) if question_num >= len(survey.questions) else question_num + 1
-        flash('You attempted to access an invalid question. Redirected to the next available question.')
+        flash('You attempted to access an invalid question. Redirected to the next available question.', 'error')
         return redirect(url_for('question', question_num=next_question_num))
 
     expected_question_num = len(responses)
     if question_num != expected_question_num:
         # If the user manually types a higher question number, redirect them to the next expected question.
-        flash('You attempted to access an invalid question. Redirected to the next expected question.')
+        flash('You attempted to access an invalid question. Redirected to the next expected question.', 'error')
         return redirect(url_for('question', question_num=expected_question_num))
 
     if request.method == 'POST':

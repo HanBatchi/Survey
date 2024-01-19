@@ -1,0 +1,10 @@
+.flashes li{
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  font-weight: bold;
+}
+.flashes .error{
+  background-color: rgba(255, 0, 0, 0.1);
+}

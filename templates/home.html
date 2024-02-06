@@ -5,6 +5,8 @@
 {% block content %}
 
     <p>{{survey.instructions}}</p>
-    <a href="{{ url_for('question', question_num=0) }}"><button>Start Survey</button></a>
+    <form action="/" method="POST">
+        <button>Start!</button>
+      </form>
 
 {% endblock %}

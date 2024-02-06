@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>{% block title%} Survey App {% endblock %}</title>
 </head>
 <body>
@@ -16,6 +16,7 @@
       </ul>
     {% endif %}
   {% endwith %}
+  
   <div class="container">
     <h1>{% block heading%}{% endblock %}</h1>
     {% block content %}{% endblock %} 
